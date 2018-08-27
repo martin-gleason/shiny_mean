@@ -1,0 +1,13 @@
+name: shiny_mean
+title: shiny_mean
+username:
+account: allcomicsconsideredstats
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 409931
+bundleId: 1556870
+url: https://allcomicsconsideredstats.shinyapps.io/shiny_mean/
+when: 1535406418.09282
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: so_test/app.R
