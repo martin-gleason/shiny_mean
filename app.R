@@ -31,8 +31,9 @@ ui <- fluidPage(
       mainPanel(
          plotOutput("histPlot"),
          h3(textOutput("mean")),
-         h3(textOutput("median"),
-         h3(textOutput("range")))
+         h3(textOutput("median")),
+         h3(textOutput("range")),
+         h3(textOutput("mode"))
          
       )
    )
@@ -53,10 +54,12 @@ server <- function(input, output) {
     
       minIn <- min(x)
       maxIn <- max(x)
+      modeIn <- mode(x)
       
     output$mean <- renderText(paste("The mean is: ", mean(x, na.rm =TRUE), " inches."))
-    output$median <- renderText(paste("The median is: ", median(x, na.rm = TRUE), " inches"))
-    output$range <- renderText(paste("The range is from ", minIn, " to ", maxIn))
+    output$median <- renderText(paste("The median is: ", median(x, na.rm = TRUE), "."))
+    output$range <- renderText(paste("The range is from ", minIn, " to ", maxIn, "."))
+    output$mode <- renderText(paste("The mode is from ", modeIn, "."))
 
    })
   })
