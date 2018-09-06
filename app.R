@@ -9,6 +9,8 @@
 
 library(shiny)
 source("shiny_mean_vector.R")
+source("Mode.R")
+
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -54,12 +56,12 @@ server <- function(input, output) {
     
       minIn <- min(x)
       maxIn <- max(x)
-      modeIn <- mode(x)
+      modeIn <- Mode(x)
       
     output$mean <- renderText(paste("The mean is: ", mean(x, na.rm =TRUE), " inches."))
     output$median <- renderText(paste("The median is: ", median(x, na.rm = TRUE), "."))
     output$range <- renderText(paste("The range is from ", minIn, " to ", maxIn, "."))
-    output$mode <- renderText(paste("The mode is from ", modeIn, "."))
+    output$mode <- renderText(paste("The mode is ", modeIn, "."))
 
    })
   })

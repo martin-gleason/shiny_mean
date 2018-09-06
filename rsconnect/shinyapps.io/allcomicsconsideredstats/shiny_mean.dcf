@@ -5,9 +5,9 @@ account: allcomicsconsideredstats
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 409931
-bundleId: 1556870
+bundleId: 1572231
 url: https://allcomicsconsideredstats.shinyapps.io/shiny_mean/
-when: 1535406418.09282
+when: 1536233296.62946
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: so_test/app.R
